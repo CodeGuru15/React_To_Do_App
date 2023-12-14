@@ -1,6 +1,5 @@
-import { CiEdit } from "react-icons/ci";
-
 import DeleteTask from "./DeleteTask";
+import EditTask from "./EditButton";
 
 const Task = ({ mytask, myId }) => {
   return (
@@ -11,10 +10,8 @@ const Task = ({ mytask, myId }) => {
       <div>
         <p className="p-1 text-slate-600 italic font-semibold">{mytask}</p>
       </div>
-      <div className=" my-auto">
-        <button className="p-1 text-blue-800">
-          <CiEdit />
-        </button>
+      <div className="flex my-auto">
+        <EditTask taskId={myId} />
         <DeleteTask myId={myId} />
       </div>
     </div>
