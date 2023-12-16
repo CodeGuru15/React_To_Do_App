@@ -13,6 +13,7 @@ const DeleteTask = ({ myId }) => {
   const handleDelete = () => {
     try {
       axios.delete(`http://localhost:1000/tasks/${myId}`);
+      setConfirm(!confirm);
     } catch (error) {
       alert(error.message);
     }
@@ -31,7 +32,10 @@ const DeleteTask = ({ myId }) => {
           </button>
         </section>
       ) : (
-        <button onClick={handleToggle} className="p-1 text-red-500">
+        <button
+          onClick={handleToggle}
+          className="p-1 text-red-400 hover:text-white"
+        >
           <RiDeleteBin6Line />
         </button>
       )}

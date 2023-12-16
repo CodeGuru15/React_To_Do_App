@@ -8,7 +8,7 @@ const EditTask = ({ taskId }) => {
 
   const handleChange = (e) => {
     const updateData = e.target.value;
-    setUpdatedtask({ title: updateData });
+    setUpdatedtask({ title: updateData, status: false });
   };
 
   const handleSubmit = (e) => {
@@ -25,21 +25,21 @@ const EditTask = ({ taskId }) => {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className=" flex">
         <label htmlFor=""></label>
         {isClicked == true ? (
           <section className="p-1">
             <input
               type="text"
               onChange={handleChange}
-              className="border-b"
+              className=" bg-slate-700 border-b text-white"
               value={updatedTask.title || ""}
             />
           </section>
         ) : (
           ""
         )}
-        <button type="submit" className="p-1 text-blue-800">
+        <button type="submit" className="p-1 text-white hover:text-green-500">
           <CiEdit />
         </button>
       </form>

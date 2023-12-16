@@ -26,13 +26,14 @@ const ShowTasks = () => {
 
   return (
     <div className="mt-5 grid place-content-center">
-      <div className="m-2 text-blue-800 flex">
-        Task Counter: <p className="font-bold mx-2"> {task.length}</p>
+      <div className="m-2 text-slate-200 flex text-xl border-white justify-center">
+        Task Counter:{" "}
+        <p className="font-bold mx-2 text-green-300"> {task.length}</p>
       </div>
       {task.map((item) => {
         return (
-          <div className="">
-            <Task mytask={item.title} myId={item._id} />
+          <div>
+            <Task mytask={item.title} myId={item._id} myStatus={item.status} />
           </div>
         );
       })}

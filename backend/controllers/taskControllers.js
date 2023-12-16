@@ -2,10 +2,11 @@ const TaskModel = require("../models/taskModels");
 
 exports.createTask = async (req, res) => {
   try {
-    const { title } = req.body;
+    const { title, status } = req.body;
 
     let newTask = new TaskModel({
       title,
+      status,
     });
 
     newTask = await newTask.save();
@@ -27,12 +28,13 @@ exports.allTasks = async (req, res) => {
 
 exports.updateTask = async (req, res) => {
   try {
-    const { title } = req.body;
+    const { title, status } = req.body;
     const taskId = req.params.id;
 
     // update product
     let updatedTask = new TaskModel({
       title,
+      status,
       _id: taskId,
     });
 
