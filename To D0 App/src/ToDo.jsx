@@ -23,7 +23,7 @@ const ToDo = () => {
 
   return (
     <div className="grid place-content-center">
-      <h2 className="py-2 text-center my-1 text-2xl font-semibold text-purple-200 tracking-widest">
+      <h2 className="py-2 my-1 text-2xl font-semibold tracking-widest text-center text-purple-200">
         To Do List
       </h2>
       <div>
@@ -35,11 +35,12 @@ const ToDo = () => {
             type="text"
             className="p-1 rounded-sm"
           />
+
           <button
             type="submit"
-            className="mx-2 my-1 py-1 px-2 bg-blue-400 hover:text-white rounded-lg"
+            className="w-8 h-8 pb-1 mx-2 my-1 text-xl text-center text-white bg-blue-400 rounded-full hover:text-white"
           >
-            Add
+            +
           </button>
         </form>
       </div>
