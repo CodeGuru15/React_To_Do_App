@@ -22,12 +22,13 @@ const ToDo = () => {
   };
 
   return (
-    <div className="grid place-content-center">
-      <h2 className="py-2 my-1 text-2xl font-semibold tracking-widest text-center text-purple-200">
+    <div className="grid gap-3 place-content-center">
+      <h2 className="my-1 text-2xl font-semibold tracking-wider text-center text-purple-200">
         To Do List
       </h2>
-      <div>
-        <form onSubmit={handleSubmit}>
+
+      <form onSubmit={handleSubmit} className="flex justify-end gap-3">
+        <div>
           <label htmlFor=""></label>
           <input
             onChange={handleChange}
@@ -35,15 +36,17 @@ const ToDo = () => {
             type="text"
             className="p-1 rounded-sm"
           />
+        </div>
 
+        <div>
           <button
             type="submit"
-            className="w-8 h-8 pb-1 mx-2 my-1 text-xl text-center text-white bg-blue-400 rounded-full hover:text-white"
+            className="w-8 h-8 text-xl text-center text-white bg-blue-400 rounded-full hover:text-white"
           >
             +
           </button>
-        </form>
-      </div>
+        </div>
+      </form>
     </div>
   );
 };

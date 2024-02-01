@@ -25,10 +25,10 @@ const ShowTasks = () => {
   }, [task]);
 
   return (
-    <div className="mt-5 grid place-content-center">
-      <div className="m-2 text-slate-200 flex text-xl border-white justify-center">
+    <div className="grid mt-5 place-content-center">
+      <div className="flex justify-center m-2 text-xl border-white text-slate-200">
         Task Counter:{" "}
-        <p className="font-bold mx-2 text-green-300"> {task.length}</p>
+        <p className="mx-2 font-bold text-green-300"> {task.length}</p>
       </div>
       {task.map((item) => {
         return (

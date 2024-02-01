@@ -14,7 +14,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       redirect_uri: window.location.origin,
     }}
   >
-    <div className="bg-slate-700 h-[100vh] pt-5">
+    <div className="bg-slate-900 h-[100vh] grid place-content-center">
       <Login />
       <ToDo />
       <ShowTasks />
